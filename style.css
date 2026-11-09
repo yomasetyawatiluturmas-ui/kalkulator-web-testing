@@ -1,0 +1,94 @@
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #fff0f3; /* Latar belakang luar pink sangat muda */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+}
+
+.calculator { 
+    background: linear-gradient(135deg, #ffdde1, #ffc0cb); /* Gradasi baby pink yang soft */
+    padding: 25px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5); 
+    width: 340px; 
+}
+
+.display-container {
+    border-bottom: 2px solid #ffb6c1; /* Garis pemisah di bawah layar */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#display { 
+    width: 100%; 
+    height: 60px; 
+    background: transparent; 
+    color: #d81b60; /* Warna teks pink tua agar kontras dan mudah dibaca */
+    text-align: right; 
+    font-size: 36px; 
+    border: none;
+    outline: none;
+    box-sizing: border-box; 
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.buttons { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
+}
+
+button { 
+    padding: 18px 10px; 
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer; 
+    border: none; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s ease; 
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+}
+
+/* Kategori Tombol Angka (Putih dengan teks pink) */
+.btn-number {
+    background-color: #ffffff;
+    color: #ff6b81;
+}
+.btn-number:hover { background-color: #ffe6ea; }
+
+/* Kategori Tombol C dan DEL (Pink cerah/tegas) */
+.btn-red {
+    background-color: #ff4d6d;
+    color: #ffffff;
+}
+.btn-red:hover { background-color: #c9184a; }
+
+/* Kategori Tombol Operator dan Kurung (Pink pastel) */
+.btn-blue {
+    background-color: #ff8fa3;
+    color: #ffffff;
+}
+.btn-blue:hover { background-color: #ff758f; }
+
+/* Tombol Sama Dengan (=) memanjang di bawah */
+.btn-equal {
+    background-color: #ff758f;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+    border-radius: 15px;
+}
+.btn-equal:hover { background-color: #ff4d6d; }
+
+/* Pengaturan rentang kolom */
+.span-2 { grid-column: span 2; }
+.span-4 { grid-column: span 4; }

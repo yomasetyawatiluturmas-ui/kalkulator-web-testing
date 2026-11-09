@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display-container">
+        <input type="text" id="display" disabled value="0">
+    </div>
+    
+    <div class="buttons">
+        <!-- Baris 1 -->
+        <button class="btn-red" onclick="clearDisplay()">C</button>
+        <button class="btn-red" onclick="deleteChar()">DEL</button>
+        <button class="btn-blue" onclick="appendChar('(')">(</button>
+        <button class="btn-blue" onclick="appendChar(')')">)</button>
+        
+        <!-- Baris 2 -->
+        <button class="btn-blue" onclick="appendChar('%')">%</button>
+        <button class="btn-blue" onclick="appendMath('sqrt')">√</button>
+        <button class="btn-blue" onclick="appendMath('sqr')">x²</button>
+        <button class="btn-blue" onclick="appendChar('^')">xʸ</button>
+        
+        <!-- Baris 3 -->
+        <button class="btn-number" onclick="appendChar('7')">7</button>
+        <button class="btn-number" onclick="appendChar('8')">8</button>
+        <button class="btn-number" onclick="appendChar('9')">9</button>
+        <button class="btn-blue" onclick="appendOperator('/')">÷</button>
+        
+        <!-- Baris 4 -->
+        <button class="btn-number" onclick="appendChar('4')">4</button>
+        <button class="btn-number" onclick="appendChar('5')">5</button>
+        <button class="btn-number" onclick="appendChar('6')">6</button>
+        <button class="btn-blue" onclick="appendOperator('*')">×</button>
+        
+        <!-- Baris 5 -->
+        <button class="btn-number" onclick="appendChar('1')">1</button>
+        <button class="btn-number" onclick="appendChar('2')">2</button>
+        <button class="btn-number" onclick="appendChar('3')">3</button>
+        <button class="btn-blue" onclick="appendOperator('-')">-</button>
+        
+        <!-- Baris 6 -->
+        <button class="btn-number span-2" onclick="appendChar('0')">0</button>
+        <button class="btn-number" onclick="appendChar('.')">.</button>
+        <button class="btn-blue" onclick="appendOperator('+')">+</button>
+        
+        <!-- Baris 7 -->
+        <button class="btn-equal span-4" onclick="calculate()">=</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
